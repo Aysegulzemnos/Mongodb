@@ -1,0 +1,263 @@
+use HR;
+db.createCollection("regions");
+db.createCollection("countries");
+db.createCollection("locations");
+db.createCollection("departments");
+db.createCollection("jobs");
+db.createCollection("employees");
+db.createCollection("job_history");
+
+Prompt ******  Populating Regions ....
+
+
+db.regions.insert({"region_id":"1","Region_name":"Europe"});
+db.regions.insert({"region_id":"2","Region_name":"Americas"}) ;
+db.regions.insert({"region_id":"3","Region_name":"Asia"});
+db.regions.insert({"region_id":"4","Region_name":"Middle East and Africa"});
+db.countries.insert({"country_id":"IT","country_name":"Italy" ,"region_id":"1"})
+db.countries.insert({"country_id":"JP","country_name":"Japan" ,"region_id":"3"})
+db.countries.insert({"country_id":"US","country_name":"United States of America" ,"region_id":"2"})
+db.countries.insert({"country_id":"CA","country_name":"Canada" ,"region_id":"2"})
+db.countries.insert({"country_id":"CN","country_name":"China" ,"region_id":"3"})
+db.countries.insert({"country_id":"IN","country_name":"India" ,"region_id":"3"})
+db.countries.insert({"country_id":"AU","country_name":"Australia" ,"region_id":"3"})
+db.countries.insert({"country_id":"ZW","country_name":"Zimbabwe" ,"region_id":"4"})
+db.countries.insert({"country_id":"SG","country_name":"Singapore" ,"region_id":"3"})
+db.countries.insert({"country_id":"UK","country_name":"United Kingdom" ,"region_id":"1"})
+db.countries.insert({"country_id":"FR","country_name":"France" ,"region_id":"1"})
+db.countries.insert({"country_id":"DE","country_name":"Germany" ,"region_id":"1"})
+db.countries.insert({"country_id":"ZM","country_name":"Zambia" ,"region_id":"4"})
+db.countries.insert({"country_id":"EG","country_name":"Egypt" ,"region_id":"4"})
+db.countries.insert({"country_id":"BR","country_name":"Brazil" ,"region_id":"2"})
+db.countries.insert({"country_id":"CH","country_name":"Switzerland" ,"region_id":"1"})
+db.countries.insert({"country_id":"NL","country_name":"Netherlands" ,"region_id":"1"})
+db.countries.insert({"country_id":"MX","country_name":"Mexico" ,"region_id":"2"});
+db.countries.insert({"country_id":"KW","country_name":"Kuwait" ,"region_id":"4"});
+db.countries.insert({"country_id":"IL","country_name":"Israel" ,"region_id":"4"});
+db.countries.insert({"country_id":"DK ","country_name":"Denmark" ,"region_id":"1"});
+db.countries.insert({"country_id":"ML","country_name":"Malaysia" ,"region_id":"3"});
+db.countries.insert({"country_id":"NG","country_name":"Nigeria" ,"region_id":"4"});
+db.countries.insert({"country_id":"AR","country_name":"Argentina" ,"region_id":"2"});
+db.countries.insert({"country_id":"BE","country_name":"Belgium" ,"region_id":"1"})
+
+
+
+
+
+Prompt ******  Populating LOCATIONS table ....
+
+db.locations.insert({"location_id":"1000","street_address":"1297 Via Cola di Rie" ,"postal_code":"00989","city":"Roma ","state_province":"" ,"country_id":"IT"});
+db.locations.insert({"location_id":"1100","street_address":"93091 Calle della Testa" ,"postal_code":"10934","city":"Venice","state_province":"" ,"country_id":"IT"});
+db.locations.insert({"location_id":"1200","street_address":"2017 Shinjuku-ku" ,"postal_code":"1689","city":"Tokyo","state_province":"Tokyo Prefecture" ,"country_id":"JP"});
+db.locations.insert({"location_id":"1300","street_address":"9450 Kamiya-cho" ,"postal_code":"6823","city":"Hiroshima","state_province":"" ,"country_id":"JP"})
+db.locations.insert({"location_id":"1400","street_address":"2014 Jabberwocky Rd" ,"postal_code":"26192","city":"Southlake","state_province":"Texas" ,"country_id":"US"})
+db.locations.insert({"location_id":"1500","street_address":"2011 Interiors Blvd" ,"postal_code":"99236","city":"South San Francisco","state_province":"California" ,"country_id":"US"})
+db.locations.insert({"location_id":"1600","street_address":"2007 Zagora St" ,"postal_code":"50090","city":"South Brunswick","state_province":"New Jersey" ,"country_id":"US"})
+db.locations.insert({"location_id":"1700","street_address":"2004 Charade Rd" ,"postal_code":"98199","city":"Seattle","state_province":"Washington" ,"country_id":"US"})
+db.locations.insert({"location_id":"1800","street_address":"147 Spadina Ave" ,"postal_code":"M5V 2L7","city":"Toronto","state_province":"Ontario" ,"country_id":"CA"})
+db.locations.insert({"location_id":"1900","street_address":"6092 Boxwood St" ,"postal_code":"YSW 9T2","city":"Whitehorse","state_province":"Yukon" ,"country_id":"CA"})
+db.locations.insert({"location_id":"2000","street_address":"40-5-12 Laogianggen" ,"postal_code":"190518","city":"Beijing","state_province":"" ,"country_id":"CN"})
+db.locations.insert({"location_id":"2100","street_address":"1298 Vileparle (E)" ,"postal_code":"490231","city":"Bombay","state_province":"Maharashtra" ,"country_id":"IN"})
+db.locations.insert({"location_id":"2200","street_address":"12-98 Victoria Street" ,"postal_code":"2901","city":"Sydney","state_province":"New South Wales" ,"country_id":"AU"})
+db.locations.insert({"location_id":"2300","street_address":"198 Clementi North" ,"postal_code":"540198","city":"Singapore","state_province":"" ,"country_id":"SG"})
+db.locations.insert({"location_id":"2400","street_address":"8204 Arthur St" ,"postal_code":"","city":"London","state_province":"" ,"country_id":"UK"})
+db.locations.insert({"location_id":"2500","street_address":"Magdalen Centre, The Oxford Science Park " ,"postal_code":"OX9 9ZB","city":"Oxford","state_province":"Oxford" ,"country_id":"UK"})
+db.locations.insert({"location_id":"2600","street_address":"9702 Chester Road" ,"postal_code":"09629850293","city":"Stretford","state_province":"Manchester" ,"country_id":"UK"})
+db.locations.insert({"location_id":"2700","street_address":"Schwanthalerstr. 7031" ,"postal_code":"80925","city":"Munich","state_province":"Bavaria" ,"country_id":"DE"})
+db.locations.insert({"location_id":"2800","street_address":"Rua Frei Caneca 1360" ,"postal_code":"01307-002","city":"Sao Paulo","state_province":"Sao Paulo" ,"country_id":"BR"})
+db.locations.insert({"location_id":"2900","street_address":"20 Rue des Corps-Saints" ,"postal_code":"1730","city":"Geneva","state_province":"Geneva" ,"country_id":"CH"})
+db.locations.insert({"location_id":"3000","street_address":"Murtenstrasse 921" ,"postal_code":"3095","city":"Bern","state_province":"BE" ,"country_id":"CH"})
+db.locations.insert({"location_id":"3100","street_address":"Pieter Breughelstraat 837" ,"postal_code":"3029SK","city":"Utrecht","state_province":"Utrecht" ,"country_id":"NL"})
+db.locations.insert({"location_id":"3200","street_address":"Mariano Escobedo 9991" ,"postal_code":"11932","city":"Mexico City","state_province":"Distrito Federal," ,"country_id":"MX"})
+ 
+
+ 
+Prompt ******  Populating Departments table ....
+
+db.departments.insert({ "department_id":"10","department_name":"Administration","manager_id":"200","location_id":"1700"});
+db.departments.insert({ "department_id":"10","department_name":"Administration","manager_id":"200","location_id":"1700"});
+db.departments.insert({"department_id":"20","department_name","Marketing","manager_id":"201","location_id","1800");
+db.departments.insert({ "department_id":"30","department_name":"Purchasing","manager_id":"114","location_id":"1700");
+db.departments.insert({"department_id":"40","department_name":"Human Resources","manager_id":"203","location_id":"2400"});
+db.departments.insert({"department_id":"50","department_name":"Shipping","manager_id":"121","location_id":"1500"});
+db.departments.insert({"department_id":"60 ","department_name":"IT","manager_id":"103","location_id":"1400"});
+db.departments.insert({"department_id":"70 ","department_name":"Public Relations","manager_id":"204","location_id":"2700"});
+db.departments.insert({"department_id":"80 ","department_name":"Sales","manager_id":"145","location_id":"2500"});
+db.departments.insert({"department_id":"90 ","department_name":"Executive","manager_id":"100","location_id":"1700"});
+db.departments.insert({"department_id":"100 ","department_name":"Finance","manager_id":"108","location_id":"1700"});
+db.departments.insert({"department_id":"110 ","department_name":"Accounting","manager_id":"205","location_id":"1700"});
+db.departments.insert({"department_id":"120 ","department_name":"Treasury","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"130 ","department_name":"Corporate Tax","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"140 ","department_name":"Control And Credit","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"150 ","department_name":"Shareholder Services","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"160 ","department_name":"Benefits","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"170 ","department_name":"Manufacturing","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"180 ","department_name":"Construction","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"190 ","department_name":"Contracting","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"200 ","department_name":"Operations","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"210 ","department_name":"IT Support","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"220 ","department_name":"NOC","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"230 ","department_name":"IT Helpdesk","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"240 ","department_name":"Government Sales","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"250 ","department_name":"Retail Sales","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"260 ","department_name":"Recruiting","manager_id":"NULL","location_id":"1700"});
+db.departments.insert({"department_id":"270 ","department_name":"Payroll","manager_id":"NULL","location_id":"1700"});
+
+REM ***************************insert data into the JOBS table
+
+Prompt ******  Populating JOBS table ....
+
+db.jobs.insert({"Job_id":"AD_PRES","Job_title":"President","Min_salary":"20080","Max_salary":"40000"});
+db.jobs.insert({"Job_id":"AD_VP","Job_title":"Administration Vice President","Min_salary":"15000","Max_salary":"30000"});
+db.jobs.insert({"Job_id":"AD_ASST","Job_title":"Administration Assistant","Min_salary":"3000","Max_salary":"6000"});
+db.jobs.insert({"Job_id":"FI_MGR","Job_title":"Finance Manager","Min_salary":"8200","Max_salary":"16000"});
+db.jobs.insert({"Job_id":"FI_ACCOUNT","Job_title":"Accountant","Min_salary":"4200","Max_salary":"9000"});
+db.jobs.insert({"Job_id":"AC_MGR","Job_title":"Accounting Manager","Min_salary":"8200","Max_salary":"16000"});
+db.jobs.insert({"Job_id":"AC_ACCOUNT","Job_title":"Public Accountant","Min_salary":"4200","Max_salary":"9000"});
+db.jobs.insert({"Job_id":"SA_MAN","Job_title":"Sales Manager","Min_salary":"10000","Max_salary":"20080"});
+db.jobs.insert({"Job_id":"SA_REP","Job_title":"Sales Representative","Min_salary":"6000","Max_salary":"12008"});
+db.jobs.insert({"Job_id":"PU_MAN","Job_title":"Purchasing Manager","Min_salary":"8000","Max_salary":"15000"});
+db.jobs.insert({"Job_id":"PU_CLERK","Job_title":"Purchasing Clerk","Min_salary":"2500","Max_salary":"5500"});
+db.jobs.insert({"Job_id":"ST_MAN","Job_title":"Stock Manager","Min_salary":"5500","Max_salary":"8500"});
+db.jobs.insert({"Job_id":"ST_CLERK","Job_title":"Stock Clerk","Min_salary":"2008","Max_salary":"5000"});
+db.jobs.insert({"Job_id":"SH_CLERK","Job_title":"Shipping Clerk","Min_salary":"2500","Max_salary":"5500"});
+db.jobs.insert({"Job_id":"IT_PROG","Job_title":"Programmer","Min_salary":"4000","Max_salary":"10000"});
+db.jobs.insert({"Job_id":"MK_MAN","Job_title":"Marketing Manager","Min_salary":"9000","Max_salary":"15000"});
+db.jobs.insert({"Job_id":"MK_REP","Job_title":"Marketing Representative","Min_salary":"4000","Max_salary":"9000"});
+db.jobs.insert({"Job_id":"HR_REP","Job_title":"Human Resources Representative","Min_salary":"4000","Max_salary":"9000"});
+db.jobs.insert({"Job_id":"PR_REP","Job_title":"Public Relations Representative","Min_salary":"4500","Max_salary":"10500"});
+
+
+Prompt ******  Populating EMPLOYEES table ....
+
+db.employees.insert({"employee_id":"100","first_name":"Steven","last_name":"King","email":"SKING","phone_number":"515.123.4567","hire_date":"17-06-2003","job_id":"AD_PRES","salary":"24000","commission_pct":"NULL","manager_id":"NULL","department_id":"90"});
+db.employees.insert({"employee_id":"101","first_name":"Neena","last_name":"Kochhar","email":"NKOCHHAR","phone_number":"515.123.4568","hire_date":"21-09-2005","job_id":"AD_VP","salary":"17000","commision_pct":"NULL","manager_id":"100","department_id":"90"});
+db.employees.insert({"employee_id":"102","first_name":"Lex","last_name":"De Haan","email":"LDEHAAN","phone_number":"515.123.4569","hire_date":"13-01-2001","job_id":"AD_VP","salary":"17000","commision_pct":"NULL","manager_id":"100","department_id":"90"});
+db.employees.insert({"employee_id":"103","first_name":"Alexander","last_name":"Hunold","email":"AHUNOLD","phone_number":"590.423.4567","hire_date":"03-01-2006","job_id":"IT_PROG","salary":"9000","commision_pct":"NULL","manager_id":"102","department_id":"60"});
+db.employees.insert({"employee_id":"104","first_name":"Bruce","last_name":"Ernst","email":"BERNST","phone_number":"590.423.4568","hire_date":"21-05-2007","job_id":"IT_PROG","salary":"6000","commision_pct":"NULL","manager_id":"103","department_id":"60"});
+db.employees.insert({"employee_id":"105","first_name":"David","last_name":"Austin","email":"DAUSTIN","phone_number":"590.423.4569","hire_date":"25-06-2005","job_id":"IT_PROG","salary":"4800","commision_pct":"NULL","manager_id":"103","department_id":"60"});
+db.employees.insert({"employee_id":"106","first_name":"Valli","last_name":"Pataballa","email":"VPATABAL","phone_number":"590.423.4560","hire_date":"05-02-2006","job_id":"IT_PROG","salary":"4800","commision_pct":"NULL","manager_id":"103","department_id":"60"});
+db.employees.insert({"employee_id":"107","first_name":"Diana","last_name":"Lorentz","email":"DLORENTZ","phone_number":"590.423.5567","hire_date":"07-02-2007","job_id":"IT_PROG","salary":"4200","commision_pct":"NULL","manager_id":"103","department_id":"60"});
+db.employees.insert({"employee_id":"108","first_name":"Nancy","last_name":"Greenberg","email":"NGREENBE","phone_number":"515.124.4569","hire_date":"17-08-2002","job_id":"FI_MGR","salary":"12008","commision_pct":"NULL","manager_id":"101","department_id":"100"});
+db.employees.insert({"employee_id":"109","first_name":"Daniel","last_name":"Faviet","email":"DFAVIET","phone_number":"515.124.4169","hire_date":"16-08-2002","job_id":"FI_ACCOUNT","salary":"9000","commision_pct":"NULL","manager_id":"108","department_id":"100"});
+db.employees.insert({"employee_id":"110","first_name":"John","last_name":"Chen","email":"JCHEN","phone_number":"515.124.4269","hire_date":"28-09-2005","job_id":"FI_ACCOUNT","salary":"8200","commision_pct":"NULL","manager_id":"108","department_id":"100"});
+db.employees.insert({"employee_id":"111","first_name":"Ismael","last_name":"Sciarra","email":"ISCIARRA","phone_number":"515.124.4369","hire_date":"30-09-2005","job_id":"FI_ACCOUNT","salary":"7700","commision_pct":"NULL","manager_id":"108","department_id":"100"});
+db.employees.insert({"employee_id":"112","first_name":"Jose Manuel","last_name":"Urman","email":"JMURMAN","phone_number":"515.124.4469","hire_date":"07-03-2006","job_id":"FI_ACCOUNT","salary":"7800","commision_pct":"NULL","manager_id":"108","department_id":"100"});
+db.employees.insert({"employee_id":"113","first_name":"Luis","last_name":"Popp","email":"LPOPP","phone_number":"515.124.4567","hire_date":"07-12-2007","job_id":"FI_ACCOUNT","salary":"6900","commision_pct":"NULL","manager_id":"108","department_id":"100"});
+db.employees.insert({"employee_id":"114","first_name":"Den","last_name":"Raphaely","email":"DRAPHEAL","phone_number":"515.127.4561","hire_date":"07-12-2002","job_id":"PU_MAN","salary":"11000","commision_pct":"NULL","manager_id":"100","department_id":"30"});
+db.employees.insert({"employee_id":"115","first_name":"Alexander","last_name":"Khoo","email":"AKHOO","phone_number":"515.127.4562","hire_date":"18-05-2003","job_id":"PU_CLERK","salary":"3100","commision_pct":"NULL","manager_id":"114","department_id":"30"});
+db.employees.insert({"employee_id":"116","first_name":"Shelli","last_name":"Baida","email":"SBAIDA","phone_number":"515.127.4563","hire_date":"24-12-2005","job_id":"PU_CLERK","salary":"2900","commision_pct":"NULL","manager_id":"114","department_id":"30"});
+db.employees.insert({"employee_id":"117","first_name":"Sigal","last_name":"Tobias","email":"STOBIAS","phone_number":"515.127.4564","hire_date":"24-07-2005","job_id":"PU_CLERK","salary":"2800","commision_pct":"NULL","manager_id":"114","department_id":"30"});
+db.employees.insert({"employee_id":"118","first_name":"Guy","last_name":"Himuro","email":"GHIMURO","phone_number":"515.127.4565","hire_date":"15-11-2006","job_id":"PU_CLERK","salary":"2600","commision_pct":"NULL","manager_id":"114","department_id":"30"});
+db.employees.insert({"employee_id":"119","first_name":"Karen","last_name":"Colmenares","email":"KCOLMENA","phone_number":"515.127.4566","hire_date":"10-08-2007","job_id":"PU_CLERK","salary":"2500","commision_pct":"NULL","manager_id":"114","department_id":"30"});
+db.employees.insert({"employee_id":"120","first_name":"Matthew","last_name":"Weiss","email":"MWEISS","phone_number":"650.123.1234","hire_date":"18-07-2004","job_id":"ST_MAN","salary":"8000","commision_pct":"NULL","manager_id":"100","department_id":"50"});
+db.employees.insert({"employee_id":"121","first_name":"Adam","last_name":"Fripp","email":"AFRIPP","phone_number":"650.123.2234","hire_date":"10-04-2005","job_id":"ST_MAN","salary":"8200","commision_pct":"NULL","manager_id":"100","department_id":"50"});
+db.employees.insert({"employee_id":"122","first_name":"Payam","last_name":"Kaufling","email":"PKAUFLIN","phone_number":"650.123.3234","hire_date":"01-05-2003","job_id":"ST_MAN","salary":"7900","commision_pct":"NULL","manager_id":"100","department_id":"50"});
+db.employees.insert({"employee_id":"123","first_name":"Shanta","last_name":"Vollman","email":"SVOLLMAN","phone_number":"650.123.4234","hire_date":"10-10-2005","job_id":"ST_MAN","salary":"6500","commision_pct":"NULL","manager_id":"100","department_id":"50"});
+db.employees.insert({"employee_id":"124","first_name":"Kevin","last_name":"Mourgos","email":"KMOURGOS","phone_number":"650.123.5234","hire_date":"16-11-2007","job_id":"ST_MAN","salary":"5800","commision_pct":"NULL","manager_id":"100","department_id":"50"});
+db.employees.insert({"employee_id":"125","first_name":"Julia","last_name":"Nayer","email":"JNAYER","phone_number":"650.124.1214","hire_date":"16-07-2005","job_id":"ST_CLERK","salary":"3200","commision_pct":"NULL","manager_id":"120","department_id":"50"});
+db.employees.insert({"employee_id":"126","first_name":"Irene","last_name":"Mikkilineni","email":"IMIKKILI","phone_number":"650.124.1224","hire_date":"28-09-2006","job_id":"ST_CLERK","salary":"2700","commision_pct":"NULL","manager_id":"120","department_id":"50"});
+db.employees.insert({"employee_id":"127","first_name":"James","last_name":"Landry","email":"JLANDRY","phone_number":"650.124.1334","hire_date":"14-01-2007","job_id":"ST_CLERK","salary":"2400","commision_pct":"NULL","manager_id":"120","department_id":"50"});
+db.employees.insert({"employee_id":"128","first_name":"Steven","last_name":"Markle","email":"SMARKLE","phone_number":"650.124.1434","hire_date":"08-03-2008","job_id":"ST_CLERK","salary":"2200","commision_pct":"NULL","manager_id":"120","department_id":"50"});
+db.employees.insert({"employee_id":"129","first_name":"Laura","last_name":"Bissot","email":"LBISSOT","phone_number":"650.124.5234","hire_date":"20-08-2005","job_id":"ST_CLERK","salary":"3300","commision_pct":"NULL","manager_id":"121","department_id":"50"});
+db.employees.insert({"employee_id":"130","first_name":"Mozhe","last_name":"Atkinson","email":"MATKINSO","phone_number":"650.124.6234","hire_date":"30-10-2005","job_id":"ST_CLERK","salary":"2800","commision_pct":"NULL","manager_id":"121","department_id":"50"});
+db.employees.insert({"employee_id":"131","first_name":"James","last_name":"Marlow","email":"JAMRLOW","phone_number":"650.124.7234","hire_date":"16-02-2005","job_id":"ST_CLERK","salary":"2500","commision_pct":"NULL","manager_id":"121","department_id":"50"});
+db.employees.insert({"employee_id":"132","first_name":"TJ","last_name":"Olson","email":"TJOLSON","phone_number":"650.124.8234","hire_date":"10-04-2007","job_id":"ST_CLERK","salary":"2100","commision_pct":"NULL","manager_id":"121","department_id":"50"});
+db.employees.insert({"employee_id":"133","first_name":"Jason","last_name":"Mallin","email":"JMALLIN","phone_number":"650.127.1934","hire_date":"14-06-2004","job_id":"ST_CLERK","salary":"3300","commision_pct":"NULL","manager_id":"122","department_id":"50"});
+db.employees.insert({"employee_id":"134","first_name":"Michael","last_name":"Rogers","email":"MROGERS","phone_number":"650.127.1834","hire_date":"26-08-2006","job_id":"ST_CLERK","salary":"2900","commision_pct":"NULL","manager_id":"122","department_id":"50"});
+db.employees.insert({"employee_id":"135","first_name":"Ki","last_name":"Gee","email":"KGEE","phone_number":"650.127.1734","hire_date":"12-12-2007","job_id":"ST_CLERK","salary":"2400","commision_pct":"NULL","manager_id":"122","department_id":"50"});
+db.employees.insert({"employee_id":"136","first_name":"Hazel","last_name":"Philtanker","email":"HPHILTAN","phone_number":"650.127.1634","hire_date":"06-02-2008","job_id":"ST_CLERK","salary":"2200","commision_pct":"NULL","manager_id":"122","department_id":"50"});
+db.employees.insert({"employee_id":"137","first_name":"Renske","last_name":"Ladwig","email":"RLADWIG","phone_number":"650.121.1234","hire_date":"14-07-2003","job_id":"ST_CLERK","salary":"3600","commision_pct":"NULL","manager_id":"123","department_id":"50"});
+db.employees.insert({"employee_id":"138","first_name":"Stephen","last_name":"Stiles","email":"SSTILES","phone_number":"650.121.2034","hire_date":"26-10-2005","job_id":"ST_CLERK","salary":"3200","commision_pct":"NULL","manager_id":"123","department_id":"50"});
+db.employees.insert({"employee_id":"139","first_name":"John","last_name":"Seo","email":"JSEO","phone_number":"650.121.2019","hire_date":"12-02-2006","job_id":"ST_CLERK","salary":"2700","commision_pct":"NULL","manager_id":"123","department_id":"50"});
+db.employees.insert({"employee_id":"140","first_name":"Joshua","last_name":"Patel","email":"JPATEL","phone_number":"650.121.1834","hire_date":"06-04-2006","job_id":"ST_CLERK","salary":"2500","commision_pct":"NULL","manager_id":"123","department_id":"50"});
+db.employees.insert({"employee_id":"141","first_name":"Trenna","last_name":"Rajs","email":"TRAJS","phone_number":"650.121.8009","hire_date":"17-10-2003","job_id":"ST_CLERK","salary":"3500","commision_pct":"NULL","manager_id":"124","department_id":"50"});
+db.employees.insert({"employee_id":"142","first_name":"Curtis","last_name":"Davies","email":"CDAVIES","phone_number":"650.121.2994","hire_date":"29-01-2005","job_id":"ST_CLERK","salary":"3100","commision_pct":"NULL","manager_id":"124","department_id":"50"});
+db.employees.insert({"employee_id":"143","first_name":"Randall","last_name":"Matos","email":"RMATOS","phone_number":"650.121.2874","hire_date":"15-03-2006","job_id":"ST_CLERK","salary":"2600","commision_pct":"NULL","manager_id":"124","department_id":"50"});
+db.employees.insert({"employee_id":"144","first_name":"Peter","last_name":"Vargas","email":"PVARGAS","phone_number":"650.121.2004","hire_date":"09-07-2006","job_id":"ST_CLERK","salary":"2500","commision_pct":"NULL","manager_id":"124","department_id":"50"});
+db.employees.insert({"employee_id":"145","first_name":"John","last_name":"Russell","email":"JRUSSEL","phone_number":"011.44.1344.429268","hire_date":"01-10-2004","job_id":"SA_MAN","salary":"14000","commision_pct":".4","manager_id":"100","department_id":"80"});
+db.employees.insert({"employee_id":"146","first_name":"Karen","last_name":"Partners","email":"KPARTNER","phone_number":"011.44.1344.467268","hire_date":"05-01-2005","job_id":"SA_MAN","salary":"13500","commision_pct":".3","manager_id":"100","department_id":"80"});
+db.employees.insert({"employee_id":"147","first_name":"Alberto","last_name":"Errazuriz","email":"AERRAZUR","phone_number":"011.44.1344.429278","hire_date":"10-03-2005","job_id":"SA_MAN","salary":"12000","commision_pct":".3","manager_id":"100","department_id":"80"});
+db.employees.insert({"employee_id":"148","first_name":"Gerald","last_name":"Cambrault","email":"GCAMBRAU","phone_number":"011.44.1344.619268","hire_date":"15-10-2007","job_id":"SA_MAN","salary":"11000","commision_pct":".3","manager_id":"100","department_id":"80"});
+db.employees.insert({"employee_id":"149","first_name":"Eleni","last_name":"Zlotkey","email":"EZLOTKEY","phone_number":"011.44.1344.429018","hire_date":"29-01-2008","job_id":"SA_MAN","salary":"10500","commision_pct":".2","manager_id":"100","department_id":"80"});
+db.employees.insert({"employee_id":"150","first_name":"Peter","last_name":"Tucker","email":"PTUCKER","phone_number":"011.44.1344.129268","hire_date":"30-01-2005","job_id":"SA_REP","salary":"10000","commision_pct":".3","manager_id":"145","department_id":"80"});
+db.employees.insert({"employee_id":"151","first_name":"David","last_name":"Bernstein","email":"DBERNSTE","phone_number":"011.44.1344.345268","hire_date":"24-03-2005","job_id":"SA_REP","salary":"9500","commision_pct":".25","manager_id":"145","department_id":"80"});
+db.employees.insert({"employee_id":"152","first_name":"Peter","last_name":"Hall","email":"PHALL","phone_number":"011.44.1344.478968","hire_date":"20-08-2005","job_id":"SA_REP","salary":"9000","commision_pct":".25","manager_id":"145","department_id":"80"});
+db.employees.insert({"employee_id":"153","first_name":"Christopher","last_name":"Olsen","email":"COLSEN","phone_number":"011.44.1344.498718","hire_date":"30-03-2006","job_id":"SA_REP","salary":"8000","commision_pct":".2","manager_id":"145","department_id":"80"});
+db.employees.insert({"employee_id":"154","first_name":"Nanette","last_name":"Cambrault","email":"NCAMBRAU","phone_number":"011.44.1344.987668","hire_date":"09-12-2006","job_id":"SA_REP","salary":"7500","commision_pct":".2","manager_id":"145","department_id":"80"});
+db.employees.insert({"employee_id":"155","first_name":"Oliver","last_name":"Tuvault","email":"OTUVAULT","phone_number":"011.44.1344.486508","hire_date":"23-11-2007","job_id":"SA_REP","salary":"7000","commision_pct":".15","manager_id":"145","department_id":"80"});
+db.employees.insert({"employee_id":"156","first_name":"Janette","last_name":"King","email":"JKING","phone_number":"011.44.1345.429268","hire_date":"30-01-2004","job_id":"SA_REP","salary":"10000","commision_pct":".35","manager_id":"146","department_id":"80"});
+db.employees.insert({"employee_id":"157","first_name":"Patrick","last_name":"Sully","email":"PSULLY","phone_number":"011.44.1345.929268","hire_date":"04-03-2004","job_id":"SA_REP","salary":"9500","commision_pct":".35","manager_id":"146","department_id":"80"});
+db.employees.insert({"employee_id":"158","first_name":"Allan","last_name":"McEwen","email":"AMCEWEN","phone_number":"011.44.1345.829268","hire_date":"01-08-2004","job_id":"SA_REP","salary":"9000","commision_pct":".35","manager_id":"146","department_id":"80"});
+db.employees.insert({"employee_id":"159","first_name":"Lindsey","last_name":"Smith","email":"LSMITH","phone_number":"011.44.1345.729268","hire_date":"10-03-2005","job_id":"SA_REP","salary":"8000","commision_pct":".3","manager_id":"146","department_id":"80"});
+db.employees.insert({"employee_id":"160","first_name":"Louise","last_name":"Doran","email":"LDORAN","phone_number":"011.44.1345.629268","hire_date":"15-12-2005","job_id":"SA_REP","salary":"7500","commision_pct":".3","manager_id":"146","department_id":"80"});
+db.employees.insert({"employee_id":"161","first_name":"Sarath","last_name":"Sewall","email":"SSEWALL","phone_number":"011.44.1345.529268","hire_date":"03-11-2006","job_id":"SA_REP","salary":"7000","commision_pct":".25","manager_id":"146","department_id":"80"});
+db.employees.insert({"employee_id":"162","first_name":"Clara","last_name":"Vishney","email":"CVISHNEY","phone_number":"011.44.1346.129268","hire_date":"11-11-2005","job_id":"SA_REP","salary":"10500","commision_pct":".25","manager_id":"147","department_id":"80"});
+db.employees.insert({"employee_id":"163","first_name":"Danielle","last_name":"Greene","email":"DGREENE","phone_number":"011.44.1346.229268","hire_date":"19-03-2007","job_id":"SA_REP","salary":"9500","commision_pct":".15","manager_id":"147","department_id":"80"});
+db.employees.insert({"employee_id":"164","first_name":"Mattea","last_name":"Marvins","email":"MMARVINS","phone_number":"011.44.1346.329268","hire_date":"24-01-2008","job_id":"SA_REP","salary":"7200","commision_pct":".10","manager_id":"147","department_id":"80"});
+db.employees.insert({"employee_id":"165","first_name":"David","last_name":"Lee","email":"DLEE","phone_number":"011.44.1346.529268","hire_date":"23-02-2008","job_id":"SA_REP","salary":"6800","commision_pct":".1","manager_id":"147","department_id":"80"});
+db.employees.insert({"employee_id":"166","first_name":"Sundar","last_name":"Ande","email":"SANDE","phone_number":"011.44.1346.629268","hire_date":"24-03-2008","job_id":"SA_REP","salary":"6400","commision_pct":".10","manager_id":"147","department_id":"80"});
+db.employees.insert({"employee_id":"167","first_name":"Amit","last_name":"Banda","email":"ABANDA","phone_number":"011.44.1346.729268","hire_date":"21-04-2008","job_id":"SA_REP","salary":"6200","commision_pct":".10","manager_id":"147","department_id":"80"});
+db.employees.insert({"employee_id":"168","first_name":"Lisa","last_name":"Ozer","email":"LOZER","phone_number":"011.44.1343.929268","hire_date":"11-03-2005","job_id":"SA_REP","salary":"11500","commision_pct":".25","manager_id":"148","department_id":"80"});
+db.employees.insert({"employee_id":"169  ","first_name":"Harrison","last_name":"Bloom","email":"HBLOOM","phone_number":"011.44.1343.829268","hire_date":"23-03-2006","job_id":"SA_REP","salary":"10000","commision_pct":".20","manager_id":"148","department_id":"80"});
+db.employees.insert({"employee_id":"170","first_name":"Tayler","last_name":"Fox","email":"TFOX","phone_number":"011.44.1343.729268","hire_date":"24-01-2006","job_id":"SA_REP","salary":"9600","commision_pct":".20","manager_id":"148","department_id":"80"});
+db.employees.insert({"employee_id":"171","first_name":"William","last_name":"Smith","email":"WSMITH","phone_number":"011.44.1343.629268","hire_date":"23-02-2007","job_id":"SA_REP","salary":"7400","commision_pct":".15","manager_id":"148","department_id":"80"});
+db.employees.insert({"employee_id":"172","first_name":"Elizabeth","last_name":"Bates","email":"EBATES","phone_number":"011.44.1343.529268","hire_date":"24-03-2007","job_id":"SA_REP","salary":"7300","commision_pct":".15","manager_id":"148","department_id":"80"});
+db.employees.insert({"employee_id":"173","first_name":"Sundita","last_name":"Kumar","email":"SKUMAR","phone_number":"011.44.1343.329268","hire_date":"21-04-2008","job_id":"SA_REP","salary":"6100","commision_pct":".10","manager_id":"148","department_id":"80"});
+db.employees.insert({"employee_id":"174","first_name":"Ellen","last_name":"Abel","email":"EABEL","phone_number":"011.44.1644.429267","hire_date":"11-05-2004","job_id":"SA_REP","salary":"11000","commision_pct":".30","manager_id":"149","department_id":"80"});
+db.employees.insert({"employee_id":"175","first_name":"Alyssa","last_name":"Hutton","email":"AHUTTON","phone_number":"011.44.1644.429266","hire_date":"19-03-2005","job_id":"SA_REP","salary":"8800","commision_pct":".25","manager_id":"149","department_id":"80"});
+db.employees.insert({"employee_id":"176","first_name":"Jonathon","last_name":"Taylor","email":"JTAYLOR","phone_number":"011.44.1644.429265","hire_date":"24-03-2006","job_id":"SA_REP","salary":"8600","commision_pct":".20","manager_id":"149","department_id":"80"});
+db.employees.insert({"employee_id":"177","first_name":"Jack","last_name":"Livingston","email":"JLIVINGS","phone_number":"011.44.1644.429264","hire_date":"23-04-2006","job_id":"SA_REP","salary":"8400","commision_pct":".20","manager_id":"149","department_id":"80"});
+db.employees.insert({"employee_id":"178","first_name":"Kimberely","last_name":"Grant","email":"KGRANT","phone_number":"011.44.1644.429263","hire_date":"24-05-2007","job_id":"SA_REP","salary":"7000","commision_pct":".15","manager_id":"149","department_id":"NULL"});
+db.employees.insert({"employee_id":"179","first_name":"Charles","last_name":"Johnson","email":"CJOHNSON","phone_number":"011.44.1644.429262","hire_date":"04-01-2008","job_id":"SA_REP","salary":"6200","commision_pct":".10","manager_id":"149","department_id":"80"});
+db.employees.insert({"employee_id":"180","first_name":"Winston","last_name":"Taylor","email":"WTAYLOR","phone_number":"650.507.9876","hire_date":"24-01-2006","job_id":"SH_CLERK","salary":"3200","commision_pct":"NULL","manager_id":"120","department_id":"50"});
+db.employees.insert({"employee_id":"181","first_name":"Jean","last_name":"Fleaur","email":"JFLEAUR","phone_number":"650.507.9877","hire_date":"23-02-2006","job_id":"SH_CLERK","salary":"3100","commision_pct":"NULL","manager_id":"120","department_id":"50"});
+db.employees.insert({"employee_id":"182","first_name":"Martha","last_name":"Sullivan","email":"MSULLIVA","phone_number":"650.507.9878","hire_date":"21-06-2007","job_id":"SH_CLERK","salary":"2500","commision_pct":"NULL","manager_id":"120","department_id":"50"});
+db.employees.insert({"employee_id":"183","first_name":"Girard","last_name":"Geoni","email":"GGEONI","phone_number":"650.507.9879","hire_date":"03-02-2008","job_id":"SH_CLERK","salary":"2800","commision_pct":"NULL","manager_id":"120","department_id":"50"});
+db.employees.insert({"employee_id":"184","first_name":"Nandita","last_name":"Sarchand","email":"NSARCHAN","phone_number":"650.509.1876","hire_date":"27-01-2004","job_id":"SH_CLERK","salary":"4200","commision_pct":"NULL","manager_id":"121","department_id":"50"});
+db.employees.insert({"employee_id":"185","first_name":"Alexis","last_name":"Bull","email":"ABULL","phone_number":"650.509.2876","hire_date":"20-02-2005","job_id":"SH_CLERK","salary":"4100","commision_pct":"NULL","manager_id":"121","department_id":"50"});
+db.employees.insert({"employee_id":"186","first_name":"Julia","last_name":"Dellinger","email":"JDELLING","phone_number":"650.509.3876","hire_date":"24-06-2006","job_id":"SH_CLERK","salary":"3400","commision_pct":"NULL","manager_id":"121","department_id":"50"});
+db.employees.insert({"employee_id":"187","first_name":"Anthony","last_name":"Cabrio","email":"ACABRIO","phone_number":"650.509.4876","hire_date":"07-02-2007","job_id":"SH_CLERK","salary":"3000","commision_pct":"NULL","manager_id":"121","department_id":"50"});
+db.employees.insert({"employee_id":"188","first_name":"Kelly","last_name":"Chung","email":"KCHUNG","phone_number":"650.505.1876","hire_date":"14-06-2005","job_id":"SH_CLERK","salary":"3800","commision_pct":"NULL","manager_id":"122","department_id":"50"});
+db.employees.insert({"employee_id":"189","first_name":"Jennifer","last_name":"Dilly","email":"JDILLY","phone_number":"650.505.2876","hire_date":"13-08-2005","job_id":"SH_CLERK","salary":"3600","commision_pct":"NULL","manager_id":"122","department_id":"50"});
+db.employees.insert({"employee_id":"190","first_name":"Timothy","last_name":"Gates","email":"TGATES","phone_number":"650.505.3876","hire_date":"11-07-2006","job_id":"SH_CLERK","salary":"2900","commision_pct":"NULL","manager_id":"122","department_id":"50"});
+db.employees.insert({"employee_id":"191","first_name":"Randall","last_name":"Perkins","email":"RPERKINS","phone_number":"650.505.4876","hire_date":"19-12-2007","job_id":"SH_CLERK","salary":"2500","commision_pct":"NULL","manager_id":"122","department_id":"50"});
+db.employees.insert({"employee_id":"192","first_name":"Sarah","last_name":"Bell","email":"SBELL","phone_number":"650.501.1876","hire_date":"04-02-2004","job_id":"SH_CLERK","salary":"4000","commision_pct":"NULL","manager_id":"123","department_id":"50"});
+db.employees.insert({"employee_id":"193","first_name":"Britney","last_name":"Everett","email":"BEVERETT","phone_number":"650.501.2876","hire_date":"03-03-2005","job_id":"SH_CLERK","salary":"3900","commision_pct":"NULL","manager_id":"123","department_id":"50"});
+db.employees.insert({"employee_id":"194","first_name":"Samuel","last_name":"McCain","email":"SMCCAIN","phone_number":"650.501.3876","hire_date":"01-07-2006","job_id":"SH_CLERK","salary":"3200","commision_pct":"NULL","manager_id":"123","department_id":"50"});
+db.employees.insert({"employee_id":"195","first_name":"Vance","last_name":"Jones","email":"VJONES","phone_number":"650.501.4876","hire_date":"17-03-2007","job_id":"SH_CLERK","salary":"2800","commision_pct":"NULL","manager_id":"123","department_id":"50"});
+db.employees.insert({"employee_id":"196","first_name":"Alana","last_name":"Walsh","email":"AWALSH","phone_number":"650.507.9811","hire_date":"24-04-2006","job_id":"SH_CLERK","salary":"3100","commision_pct":"NULL","manager_id":"124","department_id":"50"});
+db.employees.insert({"employee_id":"197","first_name":"Kevin","last_name":"Feeney","email":"KFEENEY","phone_number":"650.507.9822","hire_date":"23-05-2006","job_id":"SH_CLERK","salary":"3000","commision_pct":"NULL","manager_id":"124","department_id":"50"});
+db.employees.insert({"employee_id":"198","first_name":"Donald","last_name":"OConnell","email":"DOCONNEL","phone_number":"650.507.9833","hire_date":"21-06-2007","job_id":"SH_CLERK","salary":"2600","commision_pct":"NULL","manager_id":"124","department_id":"50"});
+db.employees.insert({"employee_id":"199","first_name":"Douglas","last_name":"Grant","email":"DGRANT","phone_number":"650.507.9844","hire_date":"13-01-2008","job_id":"SH_CLERK","salary":"2600","commision_pct":"NULL","manager_id":"124","department_id":"50"});
+db.employees.insert({"employee_id":"200","first_name":"Jennifer","last_name":"Whalen","email":"JWHALEN","phone_number":"515.123.4444","hire_date":"17-09-2003","job_id":"AD_ASST","salary":"4400","commision_pct":"NULL","manager_id":"101","department_id":"10"});
+db.employees.insert({"employee_id":"201","first_name":"Michael","last_name":"Hartstein","email":"MHARTSTE","phone_number":"515.123.5555","hire_date":"17-02-2004","job_id":"MK_MAN","salary":"13000","commision_pct":"NULL","manager_id":"100","department_id":"20"});
+db.employees.insert({"employee_id":"202","first_name":"Pat","last_name":"Fay","email":"PFAY","phone_number":"603.123.6666","hire_date":"17-08-2005","job_id":"MK_REP","salary":"6000","commision_pct":"NULL","manager_id":"201","department_id":"20"});
+db.employees.insert({"employee_id":"203","first_name":"Susan","last_name":"Mavris","email":"SMAVRIS","phone_number":"515.123.7777","hire_date":"07-06-2002","job_id":"HR_REP","salary":"6500","commision_pct":"NULL","manager_id":"101","department_id":"40"});
+db.employees.insert({"employee_id":"204","first_name":"Hermann","last_name":"Baer","email":"HBAER","phone_number":"515.123.8888","hire_date":"07-06-2002","job_id":"PR_REP","salary":"10000","commision_pct":"NULL","manager_id":"101","department_id":"70"});
+db.employees.insert({"employee_id":"205","first_name":"Shelley","last_name":"Higgins","email":"SHIGGINS","phone_number":"515.123.8080","hire_date":"07-06-2002","job_id":"AC_MGR","salary":"12008","commision_pct":"NULL","manager_id":"101","department_id":"110"});
+db.employees.insert({"employee_id":"206","first_name":"William","last_name":"Gietz","email":"WGIETZ","phone_number":"515.123.8181","hire_date":"07-06-2002","job_id":"AC_ACCOUNT","salary":"8300","commision_pct":"NULL","manager_id":"205","department_id":"110"});
+
+
+
+REM ********* insert data into the JOB_HISTORY table
+Prompt ******  Populating JOB_HISTORY table ....
+
+
+
+db.job_history.insert({"employee_id":"102","start_date":"13-01-2001","end_date":"24-07-2006","job_id":"IT_PROG","department_id":"60"});
+db.job_history.insert({"employee_id":"101","start_date":"21-09-1997","end_date":"27-10-2001","job_id":"AC_ACCOUNT","department_id":"110"});
+db.job_history.insert({"employee_id":"101","start_date":"28-10-2001","end_date":"15-03-2005","job_id":"AC_MGR","department_id":"110"});
+db.job_history.insert({"employee_id":"201","start_date":"17-02-2004","end_date":"19-12-2007","job_id":"MK_REP","department_id":"20"});
+db.job_history.insert({"employee_id":"114","start_date":"24-03-2006","end_date":"'31-12-2007","job_id":"ST_CLERK","department_id":"50"});
+db.job_history.insert({"employee_id":"122","start_date":"01-01-2007","end_date":"31-12-2007","job_id":"ST_CLERK","department_id":"50"});
+db.job_history.insert({"employee_id":"200","start_date":"17-09-1995","end_date":"17-06-2001","job_id":"AD_ASST","department_id":"90"});
+db.job_history.insert({"employee_id":"176","start_date":"24-03-2006","end_date":"31-12-2006","job_id":"SA_REP","department_id":"80"});
+db.job_history.insert({"employee_id":"176","start_date":"01-01-2007","end_date":"31-12-2007","job_id":"SA_MAN","department_id":"80"});
+db.job_history.insert({"employee_id":"200","start_date":"01-07-2002","end_date":"31-12-2006","job_id":"AC_ACCOUNT","department_id":"90"});
+
+
+
+
+
+  
